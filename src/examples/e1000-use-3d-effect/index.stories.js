@@ -1,14 +1,15 @@
 import 'resize-observer-polyfill'
 import React                from 'react'
 import { animated }         from 'react-spring'
-import { use3dEffect }      from 'use-3d-effect'
+import { storiesOf }        from '@storybook/react'
 import styled               from 'styled-components'
+import { use3dEffect }      from 'use-3d-effect'
 
 
-import GlobalStyle          from 'examples/GlobalStyle'
+import GlobalStyle          from '../GlobalStyle'
 
 
-export default () => {
+const Card = () => {
   const ref = React.useRef(null)
   const { style, ...mouseHandlers } = use3dEffect(ref)
 
@@ -40,3 +41,8 @@ export default () => {
     </A.Button>
   </>
 }
+
+storiesOf('Examples|#1000 - Card with 3d effect', module)
+  .add('index', () => (
+    <Card />
+  ))

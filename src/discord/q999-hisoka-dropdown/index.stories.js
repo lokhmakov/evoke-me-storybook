@@ -1,8 +1,6 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { Button } from '@storybook/react/demo'
-import uuid from 'uuid/v4'
-
+import React                from 'react'
+import { storiesOf }        from '@storybook/react'
+import uuid                 from 'uuid/v4'
 
 const categoryMap = {
   FIRST: `FIRST`,
@@ -78,7 +76,7 @@ const Dropdown = (props) => {
   </>
 }
 
-export default () => {
+const PageHome = () => {
   const [category, categorySet] = React.useState(categoryMap.FIRST)
 
   const itemsOrder = React.useMemo(() => {
@@ -100,3 +98,8 @@ export default () => {
     />
   </>
 }
+
+storiesOf('Discord|#999 - @hisoka#9705 - Dropdown filter', module)
+  .add('index', () => (
+    <PageHome />
+  ))

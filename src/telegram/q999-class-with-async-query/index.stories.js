@@ -1,4 +1,6 @@
-import React                from 'react'
+import React, { Component } from 'react'
+import { storiesOf }        from '@storybook/react'
+import { Button }           from '@storybook/react/demo'
 
 
 import News                 from './News'
@@ -58,4 +60,7 @@ class PageHome extends React.Component {
   }
 }
 
-export default PageHome
+storiesOf(`Telegram|#1000 - Class with async query`, module)
+  .add(`index`, () => (
+    <PageHome />
+  ))
