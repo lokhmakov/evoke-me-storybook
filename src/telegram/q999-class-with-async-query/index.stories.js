@@ -60,7 +60,7 @@ class PageHome extends React.Component {
   }
 }
 
-storiesOf(`Telegram|#1000 - Class with async query`, module)
+storiesOf(`Telegram|#999 - Class with async query`, module)
   .add(`index`, () => (
     <PageHome />
   ))
