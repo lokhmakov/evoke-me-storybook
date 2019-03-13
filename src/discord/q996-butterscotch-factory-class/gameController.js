@@ -1,13 +1,22 @@
-import makeGameController from './makeGameController'
+import GameController1 from './GameController1'
+import GameController2 from './GameController2'
 
+const data = {
+  instance: null
+}
 
-export default makeGameController(
-  {
-    param1: 1,
-    param2: 2,
-  },
-  {
-    option1: 1,
-    option2: 2,
+function set(instance) {
+  data.instance = instance
+}
+
+export function initNewGameController(payload = {}) {
+  const { type } = payload
+
+  if (type === 1) {
+    set(new GameController1(payload))
+  } else {
+    set(new GameController2(payload))
   }
-)
+}
+
+export default data
