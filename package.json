@@ -7,13 +7,14 @@
     "start": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
-    "@storybook/addon-notes": "5.0.1",
-    "@storybook/addon-storysource": "5.0.1",
-    "@storybook/react": "5.0.1",
+    "@storybook/addon-notes": "5.0.6",
+    "@storybook/addon-storysource": "5.0.6",
+    "@storybook/react": "latest",
     "babel-core": "6.26.3",
     "babel-loader": "8.0.5",
     "react": "16.8.3",
     "react-dom": "16.8.3",
+    "react-hooks-async": "2.0.0",
     "react-spring": "8.0.14",
     "resize-observer-polyfill": "1.5.1",
     "styled-components": "4.1.3",
